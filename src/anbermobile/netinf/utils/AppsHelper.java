@@ -76,23 +76,33 @@ public class AppsHelper {
 	 * 
 	 * @return
 	 */
-	public List<AppInfo> getAppInfo() {
+	public List<AppInfo> getAppsInfo() {
 		return apps;
 	}
 
-	public void update( ){
+	/**
+	 * Updates the apps information
+	 */
+	public void update() {
 		apps.clear();
-		for ( RunningAppProcessInfo info: activityManager.getRunningAppProcesses() ){
+		for (RunningAppProcessInfo info : activityManager
+				.getRunningAppProcesses()) {
 			AppInfo appInfo = new AppInfo(info);
 			try {
-				appInfo.setLogo(packageManager.getApplicationLogo(info.processName));
+				appInfo.setLogo(packageManager
+						.getApplicationIcon(info.processName));
 			} catch (NameNotFoundException e) {
 				Log.w("load", info.processName + " icon not found");
 			}
-			appInfo.setDownloadedBytes(this.consumedDataProvider.getDownloadedBytes(info.processName));
-			appInfo.setUploadedBytes(this.consumedDataProvider.getUploadedBytes(info.processName));
-			appInfo.setDownloadedPackages(this.consumedDataProvider.getDownloadedPackages(info.processName));
-			appInfo.setUploadedPackages(this.consumedDataProvider.getDownloadedPackages(info.processName));
+			appInfo.setDownloadedBytes(this.consumedDataProvider
+					.getDownloadedBytes(info.processName));
+			appInfo.setUploadedBytes(this.consumedDataProvider
+					.getUploadedBytes(info.processName));
+			appInfo.setDownloadedPackages(this.consumedDataProvider
+					.getDownloadedPackages(info.processName));
+			appInfo.setUploadedPackages(this.consumedDataProvider
+					.getDownloadedPackages(info.processName));
+			apps.add(appInfo);
 		}
 	}
 }
