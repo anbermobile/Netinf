@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/rowborder"
+    android:paddingLeft="4dp"
+	android:paddingRight="2dp"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical= "true"
+        android:layout_width="40dp"
+    	android:layout_height="40dp"
+        android:contentDescription="@string/hello_world"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="15dp"
+        android:scaleType="fitCenter"
+    />
+    
+    <CheckBox android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+      />
+            
+	  
+     
+     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	xmlns:tools="http://schemas.android.com/tools"
+   	 	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginLeft="2dp"
+    	android:layout_marginBottom="15dp"
+    	android:layout_marginTop="15dp"
+    	android:orientation="vertical"
+    	android:layout_centerVertical="true"
+    	android:layout_toRightOf ="@id/logo"
+    	android:layout_toLeftOf="@id/checkbox"
+     >
+    
+		      <TextView
+		        android:id="@+id/appname"
+		        android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:text="@string/task_killer" 
+		    	android:layout_centerHorizontal="true"
+		    	android:gravity="center_horizontal"
+		    	android:textStyle="bold"
+		    	android:textColor="@color/black"
+		     />
+		      
+		      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        		xmlns:tools="http://schemas.android.com/tools"
+        		android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/appname"
+				android:layout_marginTop="5dp"
+				android:orientation="horizontal"
+				android:baselineAligned="false">
+				
+		          <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	        		xmlns:tools="http://schemas.android.com/tools"
+	        		android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1">
+							<ImageView
+							    android:id="@+id/upimage"
+						        android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+						        android:contentDescription="@string/hello_world"
+						        android:scaleType="fitCenter"
+						        android:src="@drawable/arrow_up_green"
+		    				/>
+						      <TextView
+						        android:id="@+id/upbytes"
+						        android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+							    android:text="@string/no_traffic" 
+							    android:textColor="@color/black"
+							 />
+				      </LinearLayout>
+				       <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			        		xmlns:tools="http://schemas.android.com/tools"
+			        		android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1">
+						      <ImageView
+						        android:id="@+id/downimage"
+						        android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+						        android:contentDescription="@string/hello_world"
+						        android:scaleType="fitCenter"
+						        android:src="@drawable/arrow_down_red"
+		    				/>
+						      <TextView
+						        android:id="@+id/downbytes"
+						        android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+							    android:text="@string/no_traffic" 
+							    android:textColor="@color/black"
+							 />
+				      </LinearLayout>
+					 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	        			xmlns:tools="http://schemas.android.com/tools"
+	        			android:layout_width="0dp"
+	        			android:layout_weight="1"
+						android:layout_height="wrap_content">
+						      <ImageView
+						        android:id="@+id/nimage"
+						        android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+						        android:contentDescription="@string/hello_world"
+						        android:scaleType="fitCenter"
+						        android:src="@drawable/arrows_updown"
+		    				/>
+						      
+						       <TextView
+						        android:id="@+id/nbytes"
+						        android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+							    android:text="@string/no_traffic" 
+							    android:textColor="@color/black"
+							 /> 
+				      </LinearLayout>
+			 </LinearLayout>
+    </RelativeLayout>
+       
+     
+
+</RelativeLayout>

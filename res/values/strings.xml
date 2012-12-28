@@ -4,5 +4,15 @@
     <string name="app_name">Netinf</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <string name="task_killer">Kill selected apps</string>
+    <string name="no_traffic">0 B</string>
+    
+    
+    <string-array name="default_sorts">
+        <item>Alphabetically</item>
+        <item>Total bytes</item>
+        <item>Bytes uploaded</item>
+        <item>Bytes downloaded</item>
+    </string-array>
 
 </resources>
